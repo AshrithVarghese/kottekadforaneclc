@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 550%;
+            background-image: url(images-150x150.png);
+            background-position-x: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            filter: blur(5px); /* Adjust the blur value as needed */
+            z-index: -1;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .info-box {
+            border: 10px solid #ddd;
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            height: 250px;
+            width: calc(50% - 20px); /* 50% width with 20px padding */
+            box-sizing: border-box; /* include padding and border in the width calculation */
+            margin-bottom: 20px;
+        }
+
+        .info-box h1 {
+            margin-top: 0;
+            font-size: 50px;
+        }
+        .info-box p{
+          font-weight: 1000;
+          font-size: 50px;
+        }
+        .info-box iframe{
+          height:120px;
+          width: 500px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 300px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            header {
+                padding: 10px;
+            }
+            body::before {
+            background-size: 80%;
+            filter: blur(5px);
+        }
+
+            .info-box {
+                width: calc(100% - 20px); /* 100% width with 20px padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>KOTTEKAD FORANE CLC</h1>
+</header>
+          <main>
+              <div class="info-box">
+                  <h1>TARGET</h1>
+                  <p>100,000</p>
+              </div>
+              <div class="info-box">
+                  <h1>COMPLETED</h1>
+                  <iframe src="https://script.google.com/macros/s/AKfycbyDjqU5265qvI1lmLp2QGA2whIx1J7eHH_mjyNFJQSQh5cu8HkFCs7LsgdgNxW5esaY/exec"></iframe>
+              </div>
+          </main>
+    
+<footer>
+    <p>© 2024 Your Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
